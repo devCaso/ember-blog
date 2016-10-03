@@ -1,0 +1,23 @@
+<div class="container wrapper">
+    <header class="">
+        {{#md-navbar name='Ember Blog' class=''}}
+            <li>
+                {{#link-to 'blog' tagName='a'}}Blog{{/link-to}}
+            </li>
+            <li class="">
+                {{#link-to 'profile' tagName='a'}}Perfil{{/link-to}}
+            </li>
+        {{/md-navbar}}
+    </header>
+    <main class="content">
+        {{outlet}}
+    </main>
+    <footer class='page-footer'>
+        {{#md-copyright text='Ember Blog'
+            class='indigo darken-2 white-text'}}
+            <a class="white-text right" href="#!">
+              More Links
+            </a>
+        {{/md-copyright}}
+    </footer>
+</div>

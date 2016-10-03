@@ -7,6 +7,10 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('index', { path: '/'});
+  this.route('blog');
+  this.route('post', { path: '/blog/:post_age/:post_month/:post_day/:post_title' });
+  this.route('profile');
 });
 
 export default Router;

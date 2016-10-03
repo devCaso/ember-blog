@@ -1,0 +1,26 @@
+
+<section class="col-s12">
+    <h2 class="center-align">Índice de post públicados</h2>
+    <div class="">
+        {{#each model as |post|}}
+            <article class="card">
+                <div class="card-content">
+                    {{#link-to "post" post}}
+                        <h3 class="card-title">{{post.title}}</h3>
+                        <small>{{post.date}}</small>
+                    {{/link-to}}
+                    <div class="card-content">
+                        {{#each post.content as |text|}}
+                            <p class="flow-text">{{text}}</p>
+                        {{/each}}
+                    </div>
+                    <div class="card-action">
+                        {{#link-to "post" post}}Leer más{{/link-to}}
+                    </div>
+                </div>
+            </article>
+        {{/each}}
+    </div>
+</section>
+
+{{outlet}}
